@@ -2,6 +2,7 @@
 
 namespace Infinety\Filemanager;
 
+use Illuminate\Http\Request;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool as BaseTool;
 
@@ -14,7 +15,7 @@ class FilemanagerTool extends BaseTool
      */
     public function boot()
     {
-        Nova::script('nova-filemanager', __DIR__.'/../dist/js/tool.js');
+        Nova::script('nova-filemanager', __DIR__ . '/../dist/js/tool.js');
     }
 
     /**
@@ -25,5 +26,10 @@ class FilemanagerTool extends BaseTool
     public function renderNavigation()
     {
         return view('nova-filemanager::navigation');
+    }
+
+    public function menu(Request $request)
+    {
+        //
     }
 }

@@ -1,12 +1,12 @@
 {
-    "name": "infinety-es/nova-filemanager",
+    "name": "vshred/nova-filemanager",
     "description": "Filemanager tool for Laravel Nova",
     "keywords": [
         "laravel",
         "nova",
         "filemanager"
     ],
-    "homepage": "https://github.com/InfinetyEs/nova-filemanager",
+    "homepage": "https://github.com/VinsanityShred/nova-filemanager",
     "license": "MIT",
     "authors": [
         {
@@ -18,24 +18,17 @@
             "name": "InfinetyEs",
             "email": "apps@infinety.es",
             "role": "Maintainer"
+        },
+        {
+            "name": "V Shred"
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "laravel/nova": "~2.0|~3.0"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^3.6",
-        "phpunit/phpunit": "7.1"
+        "php": "^7"
     },
     "autoload": {
         "psr-4": {
             "Infinety\\Filemanager\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Infinety\\Filemanager\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -46,7 +39,10 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
